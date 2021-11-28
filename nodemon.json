@@ -1,0 +1,8 @@
+{
+    "ignore" : ["./app/*"],
+    "execMap" : {
+        "js" : "node",
+        "jsx" : "./jsx.sh"
+    },
+    "ext" : "js jsx"
+}
