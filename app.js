@@ -6,7 +6,8 @@ const path = require("path")
 const fs = require("fs")
 const config = require("./config.json")
 const web = require("./routes/web")
-const api = require("./routes/api")
+const api = require("./routes/api");
+const serveFavicon = require("serve-favicon");
 mongoose.connect(config.MONGODB_ADDRESS)
 
 // Route names
@@ -38,9 +39,10 @@ fs.readdir(controllerFolder, (err, files) => {
     })
 })
 
-app.use("/public",express.static("public"));
 app.use("/css", express.static('public/css'));
 app.use("/images", express.static("public/images"));
+app.use(serveFavicon(__dirname + "/public/images/favicon.png"));
+
 
 // Port
 app.listen(4000)

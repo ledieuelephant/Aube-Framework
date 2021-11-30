@@ -8,12 +8,11 @@ function Todos(props){
         <title>Document</title>
     </head>
     <body>
-    <div>
-        <h1 className="text-center text-danger">Hello {props.name}</h1>
+        <div>
+            <h1 className="text-center text-danger">Hello {props.name}</h1>
         </div>
     </body>
     </html>
-    
 }
 
 module.exports = Todos;
